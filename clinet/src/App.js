@@ -29,20 +29,26 @@ function App() {
   }, [socket]);
   return (
     <div className="App">
-      <input
-        placeholder="Room Number..."
-        onChange={(event) => {
-          setRoom(event.target.value);
-        }}
-      />
-      <button onClick={joinRoom}> Join Room</button>
-      <input
-        placeholder="Message..."
-        onChange={(event) => {
-          setMessage(event.target.value);
-        }}
-      />
-      <button onClick={sendMessage}> Send Message</button>
+      <div>
+
+        <input className="input"
+          placeholder="Room Number..."
+          onChange={(event) => {
+            setRoom(event.target.value);
+          }}
+        />
+        <button onClick={joinRoom}> Join Room</button>
+      </div>
+      <div>
+        <input
+          placeholder="Message..."
+          onChange={(event) => {
+            setMessage(event.target.value);
+          }}
+        />
+        <button onClick={sendMessage}> Send Message</button>
+      </div>
+
       <h1> Message:</h1>
       {messageReceived}
     </div>
